@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">SmartPv</string>
+    <string name="login_email">EMAIL</string>
+    <string name="login_password">PASSWORD</string>
+    <string name="login_btn">LOGIN</string>
+    <string name="login_sign_up_btn">Don’t have an account? SignUp</string>
+
+    <string name="login_email_error">Invalid email or password.</string>
+    <string name="login_password_error">Invalid email or password.</string>
+    <string name="login_error">Invalid email or password.</string>
+    <string name="error">An error occurred!! please try again later</string>
+    <string name="login_welcome">Welcome</string>
+
+    <string name="sign_up_email">Email</string>
+    <string name="sign_up_password">Password</string>
+    <string name="sign_up_password_confirm">Confirm Password</string>
+    <string name="sign_up_first_name">First Name</string>
+    <string name="sign_up_last_name">Last Name</string>
+    <string name="sign_up_btn">Sign Up</string>
+    <string name="empty_first_name">First name can not be empty</string>
+    <string name="empty_last_name">Last name can not be empty</string>
+    <string name="empty_password">Password  can not be empty</string>
+    <string name="empty_email">Email  can not be empty</string>
+    <string name="unmatched_password">Passwords not equal</string>
+
+    <string name="home_header">My Devices</string>
+    <string name="home_add_device_btn">ADD DEVICE</string>
+    <string name="home_logout_btn">Logout</string>
+
+    <string name="device_item_imei">IMEI:</string>
+    <string name="device_item_location">LOCATION:</string>
+    <string name="device_item_temp">TEMP.</string>
+    <string name="device_item_humidity">HUMIDITY</string>
+    <string name="device_item_energy">ENERGY</string>
+    <string name="device_item_expected">EXPECTED</string>
+    <string name="device_item_status_label">Status:</string>
+    <string name="device_item_status_ok">Connected</string>
+    <string name="device_item_status_fail">Not Connected</string>
+    <string name="device_item_history_btn">HISTORY</string>
+
+    <string name="temp_symbol">%1$sC</string>
+    <string name="hum_symbol">%1$d%2$s</string>
+    <string name="energy_symbol">%1$s0J</string>
+
+    <string name="exit_msg">Press again to exit</string>
+    <string name="input_dialog_content">Enter IMEI number to add device:</string>
+    <string name="input_dialog_hint">IMEI</string>
+
+    <string name="histroy_header">History</string>
+    <string name="history_number_date">Date:</string>
+    <string name="history_number_energy">Energy:</string>
+    <string name="history_number_expected">Expected:</string>
+    <string name="no_data">No data available</string>
+    <string name="no_devices">No device available</string>
+    <string name="device_added">Device is added successfully</string>
+    <string name="chart_title"> </string>
+    <string name="chart_sub_title">The chart below shows the history and the future readings for the device.</string>
+    <string name="energy_data_name">Actual Energy</string>
+    <string name="expected_data_name">Expected Energy</string>
+
+
+</resources>

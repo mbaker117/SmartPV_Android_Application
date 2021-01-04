@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SmartPv" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/mainColor</item>
+        <item name="colorPrimaryVariant">@color/mainColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/mainColor</item>
+        <item name="colorSecondaryVariant">@color/mainColor</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+       <!-- <item name="fontFamily">@font/montserrat_bold</item>-->
+
+    </style>
+
+    <style name="CustomDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="DialogStyle" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+
+        <!-- dialog_background is drawable shape with corner radius -->
+        <item name="android:background">@color/white</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+<style name="Cus" parent="">
+    <item name="fontFamily">@font/montserrat_bold</item>
+
+
+</style>
+
+    <style name="Theme.SmartPv.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay"
+        parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>

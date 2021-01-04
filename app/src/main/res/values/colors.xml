@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="mainColor">#3ba9fd</color>
+    <color name="editTextColor">#e4e4e4</color>
+    <color name="iconsColor">#78c2fa</color>
+    <color name="hintColor">#b6b6b6</color>
+    <color name="loginTextColor">#787878</color>
+    <color name="signupColor">#282828</color>
+    <color name="signUpHintColor">#aeb6bb</color>
+    <color name="signUpTextColor">#DDE6EC</color>
+    <color name="semiTransparent">#81000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="signUpEdTxtColor">#12394d</color>
+    <color name="labelColor">#b7b8be</color>
+    <color name="deviceItemColor">#f3f2f2</color>
+    <color name="imeiLabelColor">#3178af</color>
+    <color name="locationLabelColor">#ededfe</color>
+    <color name="locationBackColor">#8bbee8</color>
+    <color name="valuesColor">#2196f3</color>
+    <color name="valuesLabelColor">#545454</color>
+    <color name="historyBtnColor">#989899</color>
+    <color name="addDeviceBtnColor">#0e8bce</color>
+    <color name="bottomTabButtonColor">#081b24</color>
+    <color name="historyNumberBackColor">#0f384d</color>
+    <color name="failColor">#F44336</color>
+</resources>
