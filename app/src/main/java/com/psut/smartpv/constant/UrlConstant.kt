@@ -2,7 +2,7 @@ package com.psut.smartpv.constant
 
 interface UrlConstant {
     companion object {
-        const val BASE_URL = "http://192.168.1.37:8082/"
+        const val BASE_URL = "http://52.91.175.107:8082/"
         const val LOGIN_PATH = "users/mobile/isValid"
         const val SIGN_UP_PATH = "users"
         const val DEVICES_PATH = "/mobiles"

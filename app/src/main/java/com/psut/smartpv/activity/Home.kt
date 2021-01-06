@@ -206,15 +206,14 @@ class Home : AppCompatActivity() {
         // Replace the contents of a view (invoked by the layout manager)
         override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
             val decimal = BigDecimal(dataSet[position].temp).setScale(1, RoundingMode.HALF_EVEN)
-            val decimalEnergy = BigDecimal(dataSet[position].energy).setScale(1, RoundingMode.HALF_EVEN)
             viewHolder.imei.text = dataSet[position].imei
             viewHolder.temp.text = context.getString(R.string.temp_symbol, decimal.toString())
             viewHolder.hum.text =
                 context.getString(R.string.hum_symbol, dataSet[position].hum.toInt(), "%")
             viewHolder.energy.text =
-                context.getString(R.string.energy_symbol, BigDecimal(dataSet[position].energy).setScale(1, RoundingMode.HALF_EVEN).toString())
+                context.getString(R.string.energy_symbol, BigDecimal(dataSet[position].energy).setScale(2, RoundingMode.HALF_EVEN).toString())
             viewHolder.expected.text =
-                context.getString(R.string.energy_symbol,BigDecimal(dataSet[position].expected).setScale(1, RoundingMode.HALF_EVEN).toString())
+                context.getString(R.string.energy_symbol,BigDecimal(dataSet[position].expected).setScale(2, RoundingMode.HALF_EVEN).toString())
             if (dataSet[position].status)
             {   viewHolder.status.setTextColor(context.getColor(R.color.mainColor))
                 viewHolder.status.text = context.getString(R.string.device_item_status_ok)

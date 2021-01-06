@@ -50,7 +50,7 @@ class SignUp : AppCompatActivity() {
             val confirmPassword = binding.confirmPasswordEdTxt.text.toString().trim()
 
             signUp(firstName, lastName, email, password, confirmPassword)
-            progressDialog.dialog.dismiss()
+
 
         }
     }
@@ -69,11 +69,15 @@ class SignUp : AppCompatActivity() {
             { response ->
                 if (response != null) {
                     when (response) {
-                        "ok" -> success(email)
+                        "ok" -> {
+                            progressDialog.dialog.dismiss()
+                            success(email)
+                        }
                         else -> {
 
                             Toast.makeText(this, response, Toast.LENGTH_LONG).show()
                             binding.emailEdTxt.error = response
+                            progressDialog.dialog.dismiss()
                         }
 
                     }
@@ -81,7 +85,7 @@ class SignUp : AppCompatActivity() {
 
 
             }, { error ->
-                Toast.makeText(this, error.toString(), Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.error), Toast.LENGTH_LONG).show()
             })
 
 

@@ -28,7 +28,7 @@ class HistoryNumbersFragment : Fragment() {
     private lateinit var rcView: RecyclerView
     private val progressDialog = CustomProgressDialogHandler()
 
-    private lateinit var itemsSwipeToRefresh:SwipeRefreshLayout
+    private lateinit var itemsSwipeToRefresh: SwipeRefreshLayout
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,12 +37,13 @@ class HistoryNumbersFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.history_numbers, container, false)
         rcView = view.findViewById(R.id.rcView)
-        progressDialog.show( context!!)
+        progressDialog.show(context!!)
 
         rcView.layoutManager = LinearLayoutManager(context!!)
-        val imei = SharedPreferencesUtil.getString(activity!!.applicationContext, DataConstant.IMEI).toString()
+        val imei = SharedPreferencesUtil.getString(activity!!.applicationContext, DataConstant.IMEI)
+            .toString()
         getData(imei, context!!)
- itemsSwipeToRefresh = view.findViewById<SwipeRefreshLayout>(R.id.itemsswipetorefresh)
+        itemsSwipeToRefresh = view.findViewById<SwipeRefreshLayout>(R.id.itemsswipetorefresh)
         itemsSwipeToRefresh.setProgressBackgroundColorSchemeColor(
             ContextCompat.getColor(
                 context!!,
@@ -57,7 +58,7 @@ class HistoryNumbersFragment : Fragment() {
         )
 
         itemsSwipeToRefresh.setOnRefreshListener {
-            getData(imei,context!!)
+            getData(imei, context!!)
         }
         return view
     }
@@ -70,12 +71,16 @@ class HistoryNumbersFragment : Fragment() {
                     val gson = GsonBuilder().create()
                     val historyData =
                         gson.fromJson(response.toString(), HistoryNumbersList::class.java)
-                    val data =historyData.data
+                    val data = historyData.data
                     val adapter = CustomAdapter(data.reversed(), context)
                     rcView.adapter = adapter
 
                 } else
-                    Toast.makeText(context, context.getString(R.string.no_data), Toast.LENGTH_LONG)
+                    Toast.makeText(
+                        context,
+                        context.getString(R.string.no_data),
+                        Toast.LENGTH_LONG
+                    )
                         .show()
 
                 progressDialog.dialog.dismiss()
@@ -91,9 +96,8 @@ class HistoryNumbersFragment : Fragment() {
     }
 
 
-
     private class CustomAdapter(
-        private var dataSet:List<HistoryNumbers>,
+        private var dataSet: List<HistoryNumbers>,
         private val context: Context
     ) :
         RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
@@ -120,10 +124,17 @@ class HistoryNumbersFragment : Fragment() {
         override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
             viewHolder.date.text = dataSet[position].date
             viewHolder.energy.text =
-                context.getString(R.string.energy_symbol,
-                    BigDecimal(dataSet[position].energy).setScale(1, RoundingMode.HALF_EVEN).toString())
+                context.getString(
+                    R.string.energy_symbol,
+                    BigDecimal(dataSet[position].energy).setScale(1, RoundingMode.HALF_EVEN)
+                        .toString()
+                )
             viewHolder.expected.text =
-                context.getString(R.string.energy_symbol, BigDecimal(dataSet[position].expected).setScale(1, RoundingMode.HALF_EVEN).toString())
+                context.getString(
+                    R.string.energy_symbol,
+                    BigDecimal(dataSet[position].expected).setScale(1, RoundingMode.HALF_EVEN)
+                        .toString()
+                )
         }
 
         // Return the size of your dataset (invoked by the layout manager)

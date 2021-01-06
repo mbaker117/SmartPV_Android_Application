@@ -40,7 +40,7 @@
 
     <string name="temp_symbol">%1$sC</string>
     <string name="hum_symbol">%1$d%2$s</string>
-    <string name="energy_symbol">%1$s0J</string>
+    <string name="energy_symbol">%1$sJ</string>
 
     <string name="exit_msg">Press again to exit</string>
     <string name="input_dialog_content">Enter IMEI number to add device:</string>
