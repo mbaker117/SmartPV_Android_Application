@@ -3,7 +3,13 @@
     package="com.psut.smartpv">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <supports-screens
+        android:resizeable="true"
+        android:anyDensity="false"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,12 +18,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartPv"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.History"></activity>
-        <activity android:name=".activity.Home" />
-        <activity android:name=".activity.SignUp" />
-        <activity android:name=".activity.MainActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".activity.Login">
+        <activity android:name=".activity.History"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activity.Home"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SignUp"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.Login"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

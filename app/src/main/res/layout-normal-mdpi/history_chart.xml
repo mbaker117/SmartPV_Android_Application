@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemsswipetorefresh"
+    android:layout_width="match_parent"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="10dp"
+
+    android:layout_height="match_parent">
+<com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+    android:id="@+id/aa_chart_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    style="@style/Cus"
+>
+
+</com.github.aachartmodel.aainfographics.aachartcreator.AAChartView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
