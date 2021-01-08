@@ -209,7 +209,7 @@ class Home : AppCompatActivity() {
             viewHolder.imei.text = dataSet[position].imei
             viewHolder.temp.text = context.getString(R.string.temp_symbol, decimal.toString())
             viewHolder.hum.text =
-                context.getString(R.string.hum_symbol, dataSet[position].hum.toInt(), "%")
+                context.getString(R.string.hum_symbol, dataSet[position].hum.toInt().toString(), "%")
             viewHolder.energy.text =
                 context.getString(R.string.energy_symbol, BigDecimal(dataSet[position].energy).setScale(1, RoundingMode.HALF_EVEN).toString())
             viewHolder.expected.text =

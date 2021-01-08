@@ -39,7 +39,7 @@
     <string name="device_item_history_btn">HISTORY</string>
 
     <string name="temp_symbol">%1$sC</string>
-    <string name="hum_symbol">%1$d%2$s</string>
+    <string name="hum_symbol">%1$s%2$s</string>
     <string name="energy_symbol">%1$sJ</string>
 
     <string name="exit_msg">Press again to exit</string>
