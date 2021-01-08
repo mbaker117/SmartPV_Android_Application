@@ -84,14 +84,13 @@
                 android:textSize="20sp"
 
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/emailEdTxt" />
 
             <Button
                 android:id="@+id/loginBtn"
                 android:layout_width="155dp"
-                android:layout_height="44dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:background="@drawable/login_btn"
                 android:fontFamily="@font/montserrat_bold"
@@ -102,7 +101,6 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
 
-                app:layout_constraintHorizontal_bias="0.503"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/passwordEdTxt" />
 
@@ -113,7 +111,7 @@
                 android:layout_marginTop="36dp"
                 android:fontFamily="@font/montserrat_semi_bold"
                 android:text="@string/login_sign_up_btn"
-                android:textColor="@color/signupColor"
+                android:textColor="@color/signUpHintColor"
                 android:textSize="18sp"
 
                 app:layout_constraintEnd_toEndOf="parent"
