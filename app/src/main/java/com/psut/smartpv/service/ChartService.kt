@@ -41,12 +41,12 @@ class ChartService {
             .colorsTheme(COLORS_THEME)
             .categories(cat)
             .stacking(aaChartStackingType)
-            .yAxisTitle("Energy (J)")
+            .yAxisTitle("Energy (Wh)")
 
             .yAxisVisible(true)
-
+            .yAxisAllowDecimals(true)
             .yAxisGridLineWidth(2f)
-
+            
 
             .dataLabelsEnabled(true)
             .dataLabelsStyle(AAStyle().color(LABEL_TEXT_COLOR).textOutline(LABEL_TEXT_OUTLINE_COLOR))
@@ -78,7 +78,7 @@ class ChartService {
 
     }
 
-    public fun getAAModel(energyData:List<Double>,expectedData:List<Double>,date:List<String>,title:String,subTitle:String,energyDataName:String,expectedDataName:String,context: Context): AAChartModel{
+     fun getAAModel(energyData:List<Double>,expectedData:List<Double>,date:List<String>,title:String,subTitle:String,energyDataName:String,expectedDataName:String,context: Context): AAChartModel{
         val energyData = createAASeriesElementsForChart(energyData.toTypedArray(),energyDataName)
         val expectedData = createAASeriesElementsForChart(expectedData.toTypedArray(),expectedDataName)
         return createModel(AAChartType.Line,date.toTypedArray(),title,subTitle,
